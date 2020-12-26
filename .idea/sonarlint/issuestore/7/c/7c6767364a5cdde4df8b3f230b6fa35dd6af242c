@@ -1,0 +1,34 @@
+
+V
+java:S1068"6Remove this unused "tornilloSegmentado" private field.(ßÖ…¬şÿÿÿÿ8ô‰ûˆê.
+R
+java:S1068"2Remove this unused "escaleraTijera" private field.( ÉŞéüÿÿÿÿ8Úşñˆê.
+U
+java:S1068"5Remove this unused "escaleraExtension" private field.(Öèïùÿÿÿÿ8œ°÷ˆê.
+T
+java:S1068"4Remove this unused "tornilloPhillips" private field.(µ´úÿÿÿÿÿ8ô‰ûˆê.
+r	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(âä˜£şÿÿÿÿ
+V
+java:S1068"6Remove this unused "martilloCarpintero" private field.(ÛÃœıÿÿÿÿ8€ùìˆê.
+P
+java:S1068"5Remove this unused "listaHerramientas" private field.(…×ÍÍ8ô‰ûˆê.
+n
+java:S1104"SMake carrito a static final constant or non-public and provide accessors if needed.(ßò‰Ì8ëîıˆê.
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñ±ÿü8áÁ€‰ê.
+¡
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(óÂÃãıÿÿÿÿ8¡‰ê.
+S
+java:S1068"3Remove this unused "linternaCamping" private field.(‡•€‹ÿÿÿÿÿ8Úşñˆê.
+
+java:S1319"rThe type of the "carrito" object should be an interface such as "List" rather than the implementation "ArrayList".(ßò‰Ì8ëîıˆê.
+¡
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ùÁéİÿÿÿÿÿ8ã¥ÿˆê.
+O
+java:S1068"4Remove this unused "martilloEbanista" private field.(æ®Ôû8ï„îˆê.
+M
+java:S1068"3Remove this unused "linternaFrontal" private field.(Íå¢k8ĞÕïˆê.
+S
+java:S1068"3Remove this unused "desarmadorPlano" private field.(¬¿ÿòøÿÿÿÿ8œ°÷ˆê.
+Q
+java:S1068"6Remove this unused "desarmadorEstrella" private field.(ŒöŸğ8œ°÷ˆê.
