@@ -78,6 +78,14 @@ public class Controlador {
         modeloHerramientas.addElement("Tornillo segmentado");
         listaHerramientas.add(this.tornilloSegmentado);
     }
+    
+    public double actualizarCostoCarrito() {
+        double precioCarrito = 0.0;
+        for(Herramienta cadaArticuloCarrito: this.listaCarrito) {
+            precioCarrito += cadaArticuloCarrito.getPrecio();
+        }
+        return precioCarrito;
+    }
 
     public void agregarACarrito(int indice) {
         try {
