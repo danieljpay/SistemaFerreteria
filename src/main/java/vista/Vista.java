@@ -18,13 +18,13 @@ public class Vista extends javax.swing.JFrame {
         this.controlador = new Controlador();
         this.jListHerramientas.setModel(controlador.getModeloHerramientas());
         this.lbNumeroPrecioCarrito.setText("0.00");
+        this.lbNumeroPrecio.setText("0.00");
     }
     
     public void actualizar() {
         this.jListHerramientas.setModel(this.controlador.getModeloHerramientas());
         this.jListCarrito.setModel(this.controlador.getModeloCarrito());
         this.lbNumeroPrecioCarrito.setText(this.controlador.actualizarCostoCarrito()+"");
-        
     }
 
     @SuppressWarnings("unchecked")
@@ -123,7 +123,7 @@ public class Vista extends javax.swing.JFrame {
         lbUnidades.setText("unidades");
 
         lbPrecio.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbPrecio.setText("Precio:");
+        lbPrecio.setText("Precio herramienta:");
 
         lbSignoPesos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbSignoPesos.setText("$");
@@ -143,7 +143,7 @@ public class Vista extends javax.swing.JFrame {
         jScrollPane3.setViewportView(txtDescripcion);
 
         lbPrecioCarrito.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbPrecioCarrito.setText("Precio total total del carrito:");
+        lbPrecioCarrito.setText("Precio total del carrito:");
 
         lbSignoPesosCarrrito.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbSignoPesosCarrrito.setText("$");
@@ -155,15 +155,6 @@ public class Vista extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(285, 285, 285)
-                        .addComponent(lbTitulo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnAgregarAlCarrito, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,22 +164,20 @@ public class Vista extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lbPrecio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lbNumeroCantidadDisponible, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbPrecio)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lbNumeroCantidadDisponible, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lbUnidades))
+                                        .addComponent(lbUnidades)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbPrecioCarrito)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lbPrecioCarrito)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(lbSignoPesosCarrrito, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(lbNumeroPrecioCarrito, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(12, 12, 12))))))
+                                        .addComponent(lbSignoPesosCarrrito, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(lbNumeroPrecioCarrito, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(12, 12, 12))))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(lbCantidadDisponible, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -215,13 +204,22 @@ public class Vista extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnRealizarCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(91, 91, 91))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnAgregarAlCarrito, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(367, 367, 367)
+                        .addComponent(lbTitulo)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(21, 21, 21)
                 .addComponent(lbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
+                .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbCarrito, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -231,9 +229,9 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(lbCantidadDisponible)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbUnidades, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbUnidades, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                             .addComponent(lbNumeroCantidadDisponible, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbPrecio)
                             .addComponent(lbPrecioCarrito))
@@ -282,7 +280,6 @@ public class Vista extends javax.swing.JFrame {
             String titulo = "Herramienta sin selección";
             JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
         }
-
     }//GEN-LAST:event_btnAgregarAlCarritoActionPerformed
 
     private void btnEliminarDelCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDelCarritoActionPerformed
@@ -296,7 +293,6 @@ public class Vista extends javax.swing.JFrame {
             String titulo = "Carrito sin selección";
             JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
         }
-
     }//GEN-LAST:event_btnEliminarDelCarritoActionPerformed
 
     private void btnVaciarElCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVaciarElCarritoActionPerformed
@@ -312,7 +308,6 @@ public class Vista extends javax.swing.JFrame {
             String titulo = "Carrito vacío";
             JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
         }
-
     }//GEN-LAST:event_btnVaciarElCarritoActionPerformed
 
     private void jListHerramientasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListHerramientasMousePressed
@@ -332,17 +327,21 @@ public class Vista extends javax.swing.JFrame {
             if (this.controlador.getListaCarrito().size() == 0) {
                 throw new CantidadCeroExcepcion("Carrito vacío");
             }
-            this.controlador.realizarCompra();
-            actualizar();
-            this.lbNumeroCantidadDisponible.setText("");
-            this.lbNumeroPrecio.setText("");
-            this.txtDescripcion.setText("");
+            int respuesta = JOptionPane.showConfirmDialog(null, "¿El cliente pagó completo los artículos?", "Confirmación de compra", JOptionPane.YES_NO_OPTION);
+            if (respuesta == 0) {
+                this.controlador.realizarCompra();
+                actualizar();
+                this.lbNumeroCantidadDisponible.setText("");
+                this.lbNumeroPrecio.setText("");
+                this.txtDescripcion.setText("");
+                this.lbNumeroPrecio.setText("0.00");
+                JOptionPane.showMessageDialog(null, "La compra se ha realizado con éxito", "Venta exitosa", JOptionPane.INFORMATION_MESSAGE);
+            }
         } catch (CantidadCeroExcepcion e1) {
             String mensaje = "No se puede realizar una compra con el carrito vacío, por favor revise su compra.";
             String titulo = "Carrito vacío";
             JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.ERROR_MESSAGE);
         }
-
     }//GEN-LAST:event_btnRealizarCompraActionPerformed
 
     /**

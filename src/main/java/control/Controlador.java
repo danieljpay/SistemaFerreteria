@@ -25,7 +25,7 @@ public class Controlador {
     public Controlador() {
         this.martilloCarpintero = new Carpintero(10, 25.50, "Martillo carpintero");
         this.martilloEbanista = new Ebanista(10, 32.20, "Martillo ebanista");
-        this.linternaFrontal = new Frontal(10, 50.20, "linterna frontal");
+        this.linternaFrontal = new Frontal(10, 50.20, "Linterna frontal");
         this.linternaCamping = new Camping(10, 21.30, "Linterna camping o de mano");
         this.escaleraTijera = new Tijera(10, 220, "Escalera en forma de tijera");
         this.escaleraExtension = new Extension(10, 310, "Escalera con extensión limitada");
