@@ -37,3 +37,5 @@ S
 #src/main/java/articulos/prueba.java,d\c\dc524dc66cdfc23f7e4dcf3fcc01ce0f15a65c7e
 V
 &src/main/java/Control/Controlador.java,7\c\7c6767364a5cdde4df8b3f230b6fa35dd6af242c
+V
+&src/main/java/control/Controlador.java,c\f\cfd7672a6a7b8e1652c16641253612b78de76c83

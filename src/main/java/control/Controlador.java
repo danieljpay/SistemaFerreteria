@@ -3,6 +3,7 @@ package control;
 import articulos.*;
 
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 
 public class Controlador {
     private Carpintero martilloCarpintero;
@@ -16,7 +17,9 @@ public class Controlador {
     private Phillips tornilloPhillips;
     private Segmentado tornilloSegmentado;
     private ArrayList<Herramienta> listaHerramientas;
-    public ArrayList<Herramienta> carrito;
+    public ArrayList<Herramienta> listaCarrito;
+    public DefaultListModel modeloHerramientas;
+    public DefaultListModel modeloCarrito;
 
     public Controlador() {
         this.martilloCarpintero = new Carpintero(10, 25.50, "Martillo carpintero");
@@ -30,31 +33,76 @@ public class Controlador {
         this.tornilloPhillips = new Phillips(10, 8.50, "Tornillo con hendidura en forma de cruz en la parte superior");
         this.tornilloSegmentado = new Segmentado(10, 6, "Tornillo con línea hundida en la parte superior");
         this.listaHerramientas = new ArrayList<>();
-        this.carrito = new ArrayList<>();
+        this.listaCarrito = new ArrayList<>();
+        this.modeloHerramientas = new DefaultListModel();
+        this.modeloCarrito = new DefaultListModel();
+        iniciarListaHerramientas();
+    }
+
+    public ArrayList<Herramienta> getListaHerramientas() {
+        return listaHerramientas;
+    }
+
+    public ArrayList<Herramienta> getCarrito() {
+        return listaCarrito;
+    }
+
+    public DefaultListModel getModeloHerramientas() {
+        return modeloHerramientas;
+    }
+
+    public DefaultListModel getModeloCarrito() {
+        return modeloCarrito;
+    }
+    
+    public void iniciarListaHerramientas() {
+        modeloHerramientas.addElement("Martillo carpintero");
+        listaHerramientas.add(this.martilloEbanista);
+        modeloHerramientas.addElement("Martillo ebanista");
+        listaHerramientas.add(martilloEbanista);
+        modeloHerramientas.addElement("Linterna frontal");
+        listaHerramientas.add(this.linternaFrontal);
+        modeloHerramientas.addElement("Linterna camping");
+        listaHerramientas.add(this.linternaCamping);
+        modeloHerramientas.addElement("Escalera tijera");
+        listaHerramientas.add(this.escaleraTijera);
+        modeloHerramientas.addElement("Escalera extensión");
+        listaHerramientas.add(this.escaleraExtension);
+        modeloHerramientas.addElement("Desarmador estrella");
+        listaHerramientas.add(this.desarmadorEstrella);
+        modeloHerramientas.addElement("Desarmador plano");
+        listaHerramientas.add(this.desarmadorPlano);
+        modeloHerramientas.addElement("Tornillo Phillips");
+        listaHerramientas.add(this.tornilloPhillips);
+        modeloHerramientas.addElement("Tornillo segmentado");
+        listaHerramientas.add(this.tornilloSegmentado);
     }
 
     public void agregarACarrito(int indice) {
-        Herramienta alCarrito = listaHerramientas.get(indice);
-        alCarrito.setCantidadDisponible(1);
-        carrito.add(alCarrito);
+        Herramienta alCarrito = this.listaHerramientas.get(indice);
+       // alCarrito.setCantidadDisponible(1);
+        this.listaCarrito.add(alCarrito);
+        this.modeloCarrito.addElement(this.modeloHerramientas.get(indice));
     }
 
     public void eliminarDelCarrito(int indice) {
-        carrito.remove(indice);
+        this.listaCarrito.remove(indice);
+        this.modeloCarrito.remove(indice);
     }
 
     public void realizarCompra() {
-        for(int i = 0; i < carrito.size(); i++) {
-            for (int j = 0; j < listaHerramientas.size(); j++) {
-                if(carrito.get(i).getClass() == listaHerramientas.get(j).getClass()) {
-                    listaHerramientas.get(j).setCantidadDisponible(listaHerramientas.get(j).getCantidadDisponible() - 1);
+        for(int i = 0; i < this.listaCarrito.size(); i++) {
+            for (int j = 0; j < this.listaHerramientas.size(); j++) {
+                if(this.listaCarrito.get(i).getClass() == this.listaHerramientas.get(j).getClass()) {
+                    this.listaHerramientas.get(j).setCantidadDisponible(this.listaHerramientas.get(j).getCantidadDisponible() - 1);
                 }
             }
         }
     }
 
     public void limpiarCarrito() {
-        carrito.clear();
+        this.listaCarrito.clear();
+        this.modeloCarrito.clear();
     }
 
 }
