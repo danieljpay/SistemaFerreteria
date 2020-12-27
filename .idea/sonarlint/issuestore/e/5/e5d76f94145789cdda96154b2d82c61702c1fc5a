@@ -1,69 +1,74 @@
 
-^
-java:S11924"HDefine a constant instead of duplicating this literal "Tahoma" 16 times.(ß‰Â
-V	java:S110	"<This class has 6 parents which is greater than 5 authorized.(¹Òûÿÿÿÿ
->
-java:S1604J"(Make this anonymous inner class a lambda(‡é”€
-C
-java:S1604R"(Make this anonymous inner class a lambda(›”èùÿÿÿÿ
-C
-java:S1604\"(Make this anonymous inner class a lambda(§‰ğÌşÿÿÿÿ
-C
-java:S1604d"(Make this anonymous inner class a lambda(â¯€¯ùÿÿÿÿ
-D
-java:S1604´"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
-y
-java:S1450¼"bRemove the "btnAgregarAlCarrito" field and declare it as a local variable in the relevant methods.(ŠõÁ¿
-{
-java:S1450½"dRemove the "btnEliminarDelCarrito" field and declare it as a local variable in the relevant methods.(”ÈÌ
-w
-java:S1450¾"`Remove the "btnRealizarCompra" field and declare it as a local variable in the relevant methods.(ü„¹³
 }
-java:S1450¿"aRemove the "btnVaciarElCarrito" field and declare it as a local variable in the relevant methods.(ÒÈÉÊøÿÿÿÿ
-r
-java:S1450À"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
-r
-java:S1450Á"VRemove the "jLabel6" field and declare it as a local variable in the relevant methods.(¸ôÂøÿÿÿÿ
-w
-java:S1450Ä"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
-w
-java:S1450Å"[Remove the "jScrollPane2" field and declare it as a local variable in the relevant methods.(ŠÌ«·şÿÿÿÿ
-w
-java:S1450Æ"[Remove the "jScrollPane3" field and declare it as a local variable in the relevant methods.(Ò‰êêùÿÿÿÿ
-z
-java:S1450Ç"cRemove the "lbCantidadDisponible" field and declare it as a local variable in the relevant methods.(¿®Ä
+java:S1450ä"aRemove the "btnVaciarElCarrito" field and declare it as a local variable in the relevant methods.(ÒÈÉÊøÿÿÿÿ
 o
-java:S1450È"XRemove the "lbCarrito" field and declare it as a local variable in the relevant methods.(âçšÿ
-ƒ
-java:S1450É"gRemove the "lbDescripcionDelArticulo" field and declare it as a local variable in the relevant methods.(´‘Üûÿÿÿÿ
-n
-java:S1450Ì"WRemove the "lbPrecio" field and declare it as a local variable in the relevant methods.(—£Àú
-w
-java:S1450Í"[Remove the "lbSignoPesos" field and declare it as a local variable in the relevant methods.( Ç½ßùÿÿÿÿ
-n
-java:S1450Î"WRemove the "lbTitulo" field and declare it as a local variable in the relevant methods.(Í¥ ñ
-o
-java:S1450Ï"YRemove the "lbUnidades" field and declare it as a local variable in the relevant methods.(ê€r
+java:S1450ô"YRemove the "lbUnidades" field and declare it as a local variable in the relevant methods.(ê€r
 H
-java:S1948
-"-Make "controlador" transient or serializable.(ŒÖş¥ûÿÿÿÿ
-P
-java:S11619":Add the "@Override" annotation above this method signature(ö¦óş
-A
-java:S1172ğ"*Remove this unused method parameter "evt".(íàåÛ
-F
-java:S1172÷"*Remove this unused method parameter "evt".(™ıãïüÿÿÿÿ
+java:S1948"-Make "controlador" transient or serializable.(ŒÖş¥ûÿÿÿÿ
+w
+java:S1450ã"`Remove the "btnRealizarCompra" field and declare it as a local variable in the relevant methods.(ü„¹³
+w
+java:S1450ë"[Remove the "jScrollPane3" field and declare it as a local variable in the relevant methods.(Ò‰êêùÿÿÿÿ
+w
+java:S1450ò"[Remove the "lbSignoPesos" field and declare it as a local variable in the relevant methods.( Ç½ßùÿÿÿÿ
 @
-java:S1172ş"*Remove this unused method parameter "evt".(É–@
-A
-java:S1172„"*Remove this unused method parameter "evt".(‰²•
+java:S1172"*Remove this unused method parameter "evt".(É–@
+y
+java:S1450á"bRemove the "btnAgregarAlCarrito" field and declare it as a local variable in the relevant methods.(ŠõÁ¿
+C
+java:S1604_"(Make this anonymous inner class a lambda(§‰ğÌşÿÿÿÿ
+r
+java:S1450æ"VRemove the "jLabel6" field and declare it as a local variable in the relevant methods.(¸ôÂøÿÿÿÿ
+o
+java:S1450í"XRemove the "lbCarrito" field and declare it as a local variable in the relevant methods.(âçšÿ
+\
+java:S2147Ï"ECombine this catch with the one at line 333, which has the same body.(¨¦Š½
+^
+java:S11927"HDefine a constant instead of duplicating this literal "Tahoma" 16 times.(ß‰Â
+\
+java:S2147Ñ"ECombine this catch with the one at line 333, which has the same body.(ã€ 
+m
+java:S1192“"ODefine a constant instead of duplicating this literal "Carrito vacÃ­o" 4 times.(¤ìé¯8¼®¾ªê.
+V	java:S110"<This class has 6 parents which is greater than 5 authorized.(¹Òûÿÿÿÿ
+\
+java:S1155’">Use isEmpty() to check whether the collection is empty or not.(µÉú8¼®¾ªê.
+D
+java:S1604Ù"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
+{
+java:S1450â"dRemove the "btnEliminarDelCarrito" field and declare it as a local variable in the relevant methods.(”ÈÌ
 F
-java:S1172"*Remove this unused method parameter "evt".(©ë‡šÿÿÿÿÿ
+java:S1172ª"*Remove this unused method parameter "evt".(©ë‡šÿÿÿÿÿ
+z
+java:S1450ì"cRemove the "lbCantidadDisponible" field and declare it as a local variable in the relevant methods.(¿®Ä
+r
+java:S1450å"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
+ƒ
+java:S1450î"gRemove the "lbDescripcionDelArticulo" field and declare it as a local variable in the relevant methods.(´‘Üûÿÿÿÿ
+A
+java:S1172ó"*Remove this unused method parameter "evt".(íàåÛ
+w
+java:S1450ê"[Remove the "jScrollPane2" field and declare it as a local variable in the relevant methods.(ŠÌ«·şÿÿÿÿ
+\
+java:S1155­">Use isEmpty() to check whether the collection is empty or not.(µÉú8¼®¾ªê.
+C
+java:S1604g"(Make this anonymous inner class a lambda(â¯€¯ùÿÿÿÿ
+P
+java:S1161<":Add the "@Override" annotation above this method signature(ö¦óş
+C
+java:S1604U"(Make this anonymous inner class a lambda(›”èùÿÿÿÿ
+n
+java:S1450ó"WRemove the "lbTitulo" field and declare it as a local variable in the relevant methods.(Í¥ ñ
 T
-java:S1197›"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ
-\
-java:S2147ª"ECombine this catch with the one at line 296, which has the same body.(¨¦Š½
-\
-java:S2147¬"ECombine this catch with the one at line 296, which has the same body.(ã€ 
+java:S1197À"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ
+F
+java:S1172"*Remove this unused method parameter "evt".(™ıãïüÿÿÿÿ
 [
-java:S2147®"ECombine this catch with the one at line 296, which has the same body.(ñÎ¯%
+java:S2147Ó"ECombine this catch with the one at line 333, which has the same body.(ñÎ¯%
+A
+java:S1172Ÿ"*Remove this unused method parameter "evt".(‰²•
+w
+java:S1450é"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ
+>
+java:S1604M"(Make this anonymous inner class a lambda(‡é”€
+n
+java:S1450ñ"WRemove the "lbPrecio" field and declare it as a local variable in the relevant methods.(—£Àú

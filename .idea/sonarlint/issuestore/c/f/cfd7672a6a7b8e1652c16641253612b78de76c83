@@ -1,25 +1,25 @@
 
+”
+java:S1319"wThe type of the "listaCarrito" object should be an interface such as "List" rather than the implementation "ArrayList".(ûÖŸË8Ûà¦“ê.
+L
+java:S3740"/Provide the parametrized type for this generic.(…¹¶á8Ûà¦“ê.
+u
+java:S1104"XMake listaCarrito a static final constant or non-public and provide accessors if needed.(ûÖŸË8Ûà¦“ê.
+’
+java:S1319/"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Î±«¼üÿÿÿÿ8Ûà¦“ê.
+Q
+java:S3740"/Provide the parametrized type for this generic.(ÒĞ¾µøÿÿÿÿ8Ûà¦“ê.
 ’
 java:S1319+"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä´¬•ÿÿÿÿÿ8Ûà¦“ê.
 Q
-java:S3740&"/Provide the parametrized type for this generic.(Œ«‘¡şÿÿÿÿ8Ûà¦“ê.
-{
-java:S1104"^Make modeloHerramientas a static final constant or non-public and provide accessors if needed.(…¹¶á8Ûà¦“ê.
-{
-java:S1104"YMake modeloCarrito a static final constant or non-public and provide accessors if needed.(ÒĞ¾µøÿÿÿÿ8Ûà¦“ê.
-
-java:S1319/"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(â£æø8Ûà¦“ê.
-u
-java:S1104"XMake listaCarrito a static final constant or non-public and provide accessors if needed.(ûÖŸË8Ûà¦“ê.
-”
-java:S1319"wThe type of the "listaCarrito" object should be an interface such as "List" rather than the implementation "ArrayList".(ûÖŸË8Ûà¦“ê.
+java:S3740'"/Provide the parametrized type for this generic.(²¬êÿÿÿÿÿ8Ûà¦“ê.
 Q
-java:S3740"/Provide the parametrized type for this generic.(ÒĞ¾µøÿÿÿÿ8Ûà¦“ê.
+java:S3740&"/Provide the parametrized type for this generic.(Œ«‘¡şÿÿÿÿ8Ûà¦“ê.
 Q
 java:S37407"/Provide the parametrized type for this generic.(ğÁêíùÿÿÿÿ8Ûà¦“ê.
+{
+java:S1104"YMake modeloCarrito a static final constant or non-public and provide accessors if needed.(ÒĞ¾µøÿÿÿÿ8Ûà¦“ê.
+{
+java:S1104"^Make modeloHerramientas a static final constant or non-public and provide accessors if needed.(…¹¶á8Ûà¦“ê.
 Q
 java:S37403"/Provide the parametrized type for this generic.(×èñ°şÿÿÿÿ8Ûà¦“ê.
-Q
-java:S3740'"/Provide the parametrized type for this generic.(²¬êÿÿÿÿÿ8Ûà¦“ê.
-L
-java:S3740"/Provide the parametrized type for this generic.(…¹¶á8Ûà¦“ê.

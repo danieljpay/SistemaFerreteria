@@ -56,7 +56,7 @@ public class Controlador {
         return modeloCarrito;
     }
     
-    public void iniciarListaHerramientas() {
+    private void iniciarListaHerramientas() {
         modeloHerramientas.addElement("Martillo carpintero");
         listaHerramientas.add(this.martilloCarpintero);
         modeloHerramientas.addElement("Martillo ebanista");
