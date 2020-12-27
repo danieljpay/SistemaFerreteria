@@ -80,7 +80,6 @@ public class Controlador {
 
     public void agregarACarrito(int indice) {
         Herramienta alCarrito = this.listaHerramientas.get(indice);
-       // alCarrito.setCantidadDisponible(1);
         this.listaCarrito.add(alCarrito);
         this.modeloCarrito.addElement(this.modeloHerramientas.get(indice));
     }
