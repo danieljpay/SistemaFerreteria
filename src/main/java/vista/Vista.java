@@ -1,6 +1,9 @@
 package vista;
 
 import control.Controlador;
+import errores.CantidadCeroExcepcion;
+
+import javax.swing.*;
 
 /**
  *
@@ -239,22 +242,46 @@ public class Vista extends javax.swing.JFrame {
 
     private void btnAgregarAlCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAlCarritoActionPerformed
         // btnAgregarAlCarrito
-        int herramientaSeleccionada = this.jListHerramientas.getSelectedIndex();
-        this.controlador.agregarACarrito(herramientaSeleccionada);
-        actualizar();
+        try {
+            int herramientaSeleccionada = this.jListHerramientas.getSelectedIndex();
+            this.controlador.agregarACarrito(herramientaSeleccionada);
+            actualizar();
+        } catch (IndexOutOfBoundsException e1) {
+            String mensaje = "Por favor, seleccione una herramienta de la lista de herramientas para poder agregar al carrito.";
+            String titulo = "Herramienta sin selección";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
+        }
+
     }//GEN-LAST:event_btnAgregarAlCarritoActionPerformed
 
     private void btnEliminarDelCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDelCarritoActionPerformed
         // btnEliminarDelCarrito
-        int indiceDelCarrito = this.jListCarrito.getSelectedIndex();
-        this.controlador.eliminarDelCarrito(indiceDelCarrito);
-        actualizar();
+        try {
+            int indiceDelCarrito = this.jListCarrito.getSelectedIndex();
+            this.controlador.eliminarDelCarrito(indiceDelCarrito);
+            actualizar();
+        } catch (IndexOutOfBoundsException e1) {
+            String mensaje = "Por favor, seleccione una herramienta del carrito para poder eliminarla.";
+            String titulo = "Carrito sin selección";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
+        }
+
     }//GEN-LAST:event_btnEliminarDelCarritoActionPerformed
 
     private void btnVaciarElCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVaciarElCarritoActionPerformed
         // btnVaciarElCarrito
-        this.controlador.limpiarCarrito();
-        actualizar();
+        try {
+            if (this.controlador.getListaCarrito().size() == 0) {
+                throw new CantidadCeroExcepcion("Carrito vacío");
+            }
+            this.controlador.limpiarCarrito();
+            actualizar();
+        } catch (CantidadCeroExcepcion e1) {
+            String mensaje = "El carrito ya está vacío.";
+            String titulo = "Carrito vacío";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
+        }
+
     }//GEN-LAST:event_btnVaciarElCarritoActionPerformed
 
     private void jListHerramientasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListHerramientasMousePressed
@@ -270,11 +297,21 @@ public class Vista extends javax.swing.JFrame {
 
     private void btnRealizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRealizarCompraActionPerformed
         // btnRealizarCompra
-        this.controlador.realizarCompra();
-        actualizar();
-        this.lbNumeroCantidadDisponible.setText("");
-        this.lbNumeroPrecio.setText("");
-        this.txtDescripcion.setText("");
+        try {
+            if (this.controlador.getListaCarrito().size() == 0) {
+                throw new CantidadCeroExcepcion("Carrito vacío");
+            }
+            this.controlador.realizarCompra();
+            actualizar();
+            this.lbNumeroCantidadDisponible.setText("");
+            this.lbNumeroPrecio.setText("");
+            this.txtDescripcion.setText("");
+        } catch (CantidadCeroExcepcion e1) {
+            String mensaje = "No se puede realizar una compra con el carrito vacío, por favor revise su compra.";
+            String titulo = "Carrito vacío";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.ERROR_MESSAGE);
+        }
+
     }//GEN-LAST:event_btnRealizarCompraActionPerformed
 
     /**

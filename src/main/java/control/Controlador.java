@@ -44,7 +44,7 @@ public class Controlador {
         return listaHerramientas;
     }
 
-    public ArrayList<Herramienta> getCarrito() {
+    public ArrayList<Herramienta> getListaCarrito() {
         return listaCarrito;
     }
 
@@ -123,7 +123,7 @@ public class Controlador {
             String mensaje = "Este artículo se agotó en medio de su compra, por lo que no se completará la compra." +
                     " Por favor, revise su carrito de compra.";
             String titulo = "Artículo agotado";
-            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.ERROR_MESSAGE);
             for(int k = 0; k < listaHerramientas.size(); k++) {
                 listaHerramientas.get(k).setCantidadDisponible(cantidades.get(k));
             }
