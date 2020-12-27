@@ -101,7 +101,12 @@ public class Controlador {
     }
 
     public void realizarCompra() {
+        ArrayList<Integer> cantidades = new ArrayList<>();
         try{
+            for(Herramienta cadaHerramienta: listaHerramientas) {
+                cantidades.add(cadaHerramienta.getCantidadDisponible());
+            }
+
             for(int i = 0; i < this.listaCarrito.size(); i++) {
                 for (int j = 0; j < this.listaHerramientas.size(); j++) {
                     if(this.listaCarrito.get(i).getClass() == this.listaHerramientas.get(j).getClass()) {
@@ -115,12 +120,14 @@ public class Controlador {
             this.listaCarrito.clear();
             this.modeloCarrito.clear();
         } catch(CantidadCeroExcepcion e1) {
-            String mensaje = "Este artículo se agotó con su compra, por lo que se le respetará la cantidad existente que compró.";
+            String mensaje = "Este artículo se agotó en medio de su compra, por lo que no se completará la compra." +
+                    " Por favor, revise su carrito de compra.";
             String titulo = "Artículo agotado";
             JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
+            for(int k = 0; k < listaHerramientas.size(); k++) {
+                listaHerramientas.get(k).setCantidadDisponible(cantidades.get(k));
+            }
         }
-
-
     }
 
     public void limpiarCarrito() {

@@ -39,3 +39,7 @@ V
 &src/main/java/Control/Controlador.java,7\c\7c6767364a5cdde4df8b3f230b6fa35dd6af242c
 V
 &src/main/java/control/Controlador.java,c\f\cfd7672a6a7b8e1652c16641253612b78de76c83
+`
+0src/main/java/errores/CantidadCeroExcepcion.java,9\9\99cdc3b67ca8acab05f82b4c8f389246a8973fbc
+N
+src/main/java/vista/Vista.java,e\5\e5d76f94145789cdda96154b2d82c61702c1fc5a

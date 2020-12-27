@@ -1,26 +1,25 @@
 
-p
-java:S1104"SMake carrito a static final constant or non-public and provide accessors if needed.(ßò‰Ì8ëîıˆê.
-V
-java:S1068"4Remove this unused "tornilloPhillips" private field.(µ´úÿÿÿÿÿ8ô‰ûˆê.
-W
-java:S1068"5Remove this unused "escaleraExtension" private field.(Öèïùÿÿÿÿ8œ°÷ˆê.
-X
-java:S1068"6Remove this unused "tornilloSegmentado" private field.(ßÖ…¬şÿÿÿÿ8ô‰ûˆê.
-X
-java:S1068"6Remove this unused "martilloCarpintero" private field.(ÛÃœıÿÿÿÿ8€ùìˆê.
-U
-java:S1068"3Remove this unused "desarmadorPlano" private field.(¬¿ÿòøÿÿÿÿ8œ°÷ˆê.
+’
+java:S1319+"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä´¬•ÿÿÿÿÿ8Ûà¦“ê.
 Q
-java:S1068	"4Remove this unused "martilloEbanista" private field.(æ®Ôû8ï„îˆê.
-T
-java:S1068"2Remove this unused "escaleraTijera" private field.( ÉŞéüÿÿÿÿ8Úşñˆê.
-O
-java:S1068
-"3Remove this unused "linternaFrontal" private field.(Íå¢k8ĞÕïˆê.
-S
-java:S1068"6Remove this unused "desarmadorEstrella" private field.(ŒöŸğ8œ°÷ˆê.
-
-java:S1319"rThe type of the "carrito" object should be an interface such as "List" rather than the implementation "ArrayList".(ßò‰Ì8ëîıˆê.
-U
-java:S1068"3Remove this unused "linternaCamping" private field.(‡•€‹ÿÿÿÿÿ8Úşñˆê.
+java:S3740&"/Provide the parametrized type for this generic.(Œ«‘¡şÿÿÿÿ8Ûà¦“ê.
+{
+java:S1104"^Make modeloHerramientas a static final constant or non-public and provide accessors if needed.(…¹¶á8Ûà¦“ê.
+{
+java:S1104"YMake modeloCarrito a static final constant or non-public and provide accessors if needed.(ÒĞ¾µøÿÿÿÿ8Ûà¦“ê.
+
+java:S1319/"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(â£æø8Ûà¦“ê.
+u
+java:S1104"XMake listaCarrito a static final constant or non-public and provide accessors if needed.(ûÖŸË8Ûà¦“ê.
+”
+java:S1319"wThe type of the "listaCarrito" object should be an interface such as "List" rather than the implementation "ArrayList".(ûÖŸË8Ûà¦“ê.
+Q
+java:S3740"/Provide the parametrized type for this generic.(ÒĞ¾µøÿÿÿÿ8Ûà¦“ê.
+Q
+java:S37407"/Provide the parametrized type for this generic.(ğÁêíùÿÿÿÿ8Ûà¦“ê.
+Q
+java:S37403"/Provide the parametrized type for this generic.(×èñ°şÿÿÿÿ8Ûà¦“ê.
+Q
+java:S3740'"/Provide the parametrized type for this generic.(²¬êÿÿÿÿÿ8Ûà¦“ê.
+L
+java:S3740"/Provide the parametrized type for this generic.(…¹¶á8Ûà¦“ê.
