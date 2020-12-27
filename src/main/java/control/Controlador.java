@@ -57,7 +57,7 @@ public class Controlador {
     
     public void iniciarListaHerramientas() {
         modeloHerramientas.addElement("Martillo carpintero");
-        listaHerramientas.add(this.martilloEbanista);
+        listaHerramientas.add(this.martilloCarpintero);
         modeloHerramientas.addElement("Martillo ebanista");
         listaHerramientas.add(martilloEbanista);
         modeloHerramientas.addElement("Linterna frontal");
@@ -98,6 +98,8 @@ public class Controlador {
                 }
             }
         }
+        this.listaCarrito.clear();
+        this.modeloCarrito.clear();
     }
 
     public void limpiarCarrito() {

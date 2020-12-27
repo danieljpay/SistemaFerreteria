@@ -89,6 +89,11 @@ public class Vista extends javax.swing.JFrame {
         btnRealizarCompra.setText("Realizar compra");
         btnRealizarCompra.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnRealizarCompra.setBorderPainted(false);
+        btnRealizarCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRealizarCompraActionPerformed(evt);
+            }
+        });
 
         btnEliminarDelCarrito.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnEliminarDelCarrito.setText("Eliminar del carrito");
@@ -233,27 +238,27 @@ public class Vista extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarAlCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAlCarritoActionPerformed
-        //btnAgregarAlCarrito
+        // btnAgregarAlCarrito
         int herramientaSeleccionada = this.jListHerramientas.getSelectedIndex();
         this.controlador.agregarACarrito(herramientaSeleccionada);
         actualizar();
     }//GEN-LAST:event_btnAgregarAlCarritoActionPerformed
 
     private void btnEliminarDelCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDelCarritoActionPerformed
-        //btnEliminarDelCarrito
+        // btnEliminarDelCarrito
         int indiceDelCarrito = this.jListCarrito.getSelectedIndex();
         this.controlador.eliminarDelCarrito(indiceDelCarrito);
         actualizar();
     }//GEN-LAST:event_btnEliminarDelCarritoActionPerformed
 
     private void btnVaciarElCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVaciarElCarritoActionPerformed
-        //btnVaciarElCarrito
+        // btnVaciarElCarrito
         this.controlador.limpiarCarrito();
         actualizar();
     }//GEN-LAST:event_btnVaciarElCarritoActionPerformed
 
     private void jListHerramientasMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListHerramientasMousePressed
-        // TODO add your handling code here:
+        // clickJLIstHerramientas
         int numHerramientaSeleccionada = this.jListHerramientas.getSelectedIndex();
         int cantidadDisponible = this.controlador.getListaHerramientas().get(numHerramientaSeleccionada).getCantidadDisponible();
         double precio = this.controlador.getListaHerramientas().get(numHerramientaSeleccionada).getPrecio();
@@ -262,6 +267,15 @@ public class Vista extends javax.swing.JFrame {
         this.lbNumeroPrecio.setText("" + precio);
         this.txtDescripcion.setText(descripcion);
     }//GEN-LAST:event_jListHerramientasMousePressed
+
+    private void btnRealizarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRealizarCompraActionPerformed
+        // btnRealizarCompra
+        this.controlador.realizarCompra();
+        actualizar();
+        this.lbNumeroCantidadDisponible.setText("");
+        this.lbNumeroPrecio.setText("");
+        this.txtDescripcion.setText("");
+    }//GEN-LAST:event_btnRealizarCompraActionPerformed
 
     /**
      * @param args the command line arguments
