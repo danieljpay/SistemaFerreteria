@@ -1,9 +1,10 @@
 package control;
 
 import articulos.*;
+import errores.CantidadCeroExcepcion;
 
 import java.util.ArrayList;
-import javax.swing.DefaultListModel;
+import javax.swing.*;
 
 public class Controlador {
     private Carpintero martilloCarpintero;
@@ -79,9 +80,19 @@ public class Controlador {
     }
 
     public void agregarACarrito(int indice) {
-        Herramienta alCarrito = this.listaHerramientas.get(indice);
-        this.listaCarrito.add(alCarrito);
-        this.modeloCarrito.addElement(this.modeloHerramientas.get(indice));
+        try {
+            if(this.listaHerramientas.get(indice).getCantidadDisponible() != 0) {
+                Herramienta alCarrito = this.listaHerramientas.get(indice);
+                this.listaCarrito.add(alCarrito);
+                this.modeloCarrito.addElement(this.modeloHerramientas.get(indice));
+            } else {
+                throw new CantidadCeroExcepcion("Este artículo está agotado.");
+            }
+        } catch(CantidadCeroExcepcion e1) {
+            String mensaje = "Este artículo se encuentra agotado.";
+            String titulo = "Artículo no disponible";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     public void eliminarDelCarrito(int indice) {
@@ -90,15 +101,26 @@ public class Controlador {
     }
 
     public void realizarCompra() {
-        for(int i = 0; i < this.listaCarrito.size(); i++) {
-            for (int j = 0; j < this.listaHerramientas.size(); j++) {
-                if(this.listaCarrito.get(i).getClass() == this.listaHerramientas.get(j).getClass()) {
-                    this.listaHerramientas.get(j).setCantidadDisponible(this.listaHerramientas.get(j).getCantidadDisponible() - 1);
+        try{
+            for(int i = 0; i < this.listaCarrito.size(); i++) {
+                for (int j = 0; j < this.listaHerramientas.size(); j++) {
+                    if(this.listaCarrito.get(i).getClass() == this.listaHerramientas.get(j).getClass()) {
+                        if(this.listaHerramientas.get(j).getCantidadDisponible() == 0) {
+                            throw new CantidadCeroExcepcion("Este artículo está agotado.");
+                        }
+                        this.listaHerramientas.get(j).setCantidadDisponible(this.listaHerramientas.get(j).getCantidadDisponible() - 1);
+                    }
                 }
             }
+            this.listaCarrito.clear();
+            this.modeloCarrito.clear();
+        } catch(CantidadCeroExcepcion e1) {
+            String mensaje = "Este artículo se agotó con su compra, por lo que se le respetará la cantidad existente que compró.";
+            String titulo = "Artículo agotado";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.WARNING_MESSAGE);
         }
-        this.listaCarrito.clear();
-        this.modeloCarrito.clear();
+
+
     }
 
     public void limpiarCarrito() {
